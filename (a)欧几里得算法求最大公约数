@@ -1,0 +1,23 @@
+定理：两个整数的最大公约数等于其中较小的那个数和两数相除余数的最大公约数。 最大公约数（Greatest Common Divisor   gcd(a,b) = gcd(b,a mod b)
+
+#include <stdio.h>
+
+int main() {
+	
+	int a,b,r;
+	
+	printf("Input the numbers:");
+	scanf("%d%d",&a,&b);
+	
+	r=a%b;
+	
+	while(r!=0){
+		a=b;
+		b=r;
+		r=a%b;
+		
+	}
+	printf("最大公约数是%d",b);
+	
+	return 0;
+}
